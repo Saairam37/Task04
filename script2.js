@@ -34,7 +34,7 @@ function fiterLists(filtValue){
         exLi.forEach((ele)=> ele.classList.remove("show"));
     }
 }
-
+//POST operation...
 const formADD = document.getElementById("formAdd");
 formADD.addEventListener("submit", async (e) =>{
   e.preventDefault();
@@ -74,7 +74,7 @@ async function fetchExpence(){
         console.log("ERROR: ",error);
     }
 }
-
+//PUT operation...
 async function updateList(iD){
     let resp = await fetch(API+iD);
     let upList = await resp.json();
@@ -121,7 +121,7 @@ function renderList(items = []) {
 
     root.appendChild(div);
   });
-
+//DELETE operation...
   root.addEventListener("click", async (e) => {
     const btn = e.target.closest("button[data-id]");
     if (!btn) return;
@@ -145,6 +145,6 @@ async function mainFunction(){
     renderList(money);
     formADD.style.display= "none";
 }
-
+//GET operation...
 mainFunction()
 console.log(API);
