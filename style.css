@@ -1,0 +1,134 @@
+body, html {
+    height: 100%;
+    margin: 0%;
+}
+* {
+  box-sizing: border-box;
+}
+
+.bgimg{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-image: url(./imgs/bgimg.jpg); 
+    background-position: center; 
+    height: 100%;
+    width: 100%;
+    filter: blur(2px);
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+.heading{
+    text-align: center; font-weight:bolder; font-family: 'Courier New', Courier, monospace;
+    color: goldenrod;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    margin: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 0.1px 25px 1px white;
+}
+.total{
+    font-size: large;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    color: white;
+}
+.formList{
+    position: relative;
+}
+.formlists>div{
+    padding: 20px;
+}
+.formBtn{
+    width: 100px; justify-self: center; padding: 5px;
+}
+#formAdd{
+    background-color: goldenrod;
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    align-items: center;
+    gap :20px;
+    border-style: solid;
+
+}
+#finanList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    width: 100%;
+    flex-direction: column;
+}
+.addStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: white;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: goldenrod;
+    position: relative;
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+.addbtn{
+    background-color: rgba(0, 0, 255, 0);
+    border-style: none;
+    color: goldenrod;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+}
+.listStyle{
+    height: 100px;
+    color: white;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: goldenrod;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+.listStyle p{
+    grid-column: 1/3;
+}
+.listStyle article{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    right: 10px;
+    top: 10px;
+}
+.incomeList, .expenseList { display: grid; }
+.show{
+    display: none !important;
+}
+
+@media (width<1200px){
+    #finanList{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (width<1024px){
+    #finanList{
+    grid-template-columns: 1fr 1fr;
+    }
+}
+@media (width<621px){
+    #finanList{
+    grid-template-columns: 1fr;
+    }
+}
