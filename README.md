@@ -39,7 +39,7 @@ income-expense-calculator/
     git clone https://github.com/yourusername/income-expense-calculator.git
   -Open index.html in any modern browser.
 (or)
-  -open 
+  -open https://incomeandexpensecalc-bysaairam.netlify.app/
 
 📌 Functional Requirements:
   -Input Section
